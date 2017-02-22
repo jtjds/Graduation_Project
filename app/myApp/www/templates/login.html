@@ -1,0 +1,29 @@
+<ion-view  view-title="用户登录">
+ 
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div class="list" style="margin-top: 20px;">
+        <label class="item item-input" style="border: 1px solid #ccc;margin: 30px;">
+           <i class="ion ion-android-person"></i><span class="input-label">用户名</span>
+           <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input" style="border: 1px solid #ccc;margin: 30px;">
+           <i class="icon ion-locked"></i><span class="input-label" style="margin-left: -25px;">密码</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <span class="set-login-pass">
+           忘记密码？
+        </span>
+        <label class="item-login">
+              <button class="button  button-positive set-login" type="submit"  id="login" style="margin-top: 10px;">登录</button>
+        </label>
+       
+      </div>
+    </form>
+    <label >
+              <p style="margin-bottom: 15px;color: #ccc;text-align: center">没有账号？现在开始注册吧！</p>
+              <button class="button  button-positive"  ng-click="jump('#/app/LoginIn')" id="loginIn" style="width: 100px;background-color:#fc9720;opacity: 0.8;margin-left: 35%; ">注册</button>
+              
+    </label>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view view-title="排行榜">
+  <ion-content >
+		    <h3 style="text-align: center;margin-top:10px;">投票排行榜</h3>
+		    <div class="bar bar-header item-input-inset" style="position: relative;width: 100%;">
+					    <label class="item-input-wrapper">
+					    <i class="icon ion-ios-search placeholder-icon"></i>
+					    <input type="search" placeholder="Search">			 
+			</div>
+			<div class="paiMing-container">
+			    <p  class="set-phb">
+			         <span >排名</span>
+			         <span style="padding-left: 26%;">投票选题</span>
+			         <span style="padding-left: 25%;">投票数</span>
+			    </p>
+                
+                <ion-list style="display: block;" id="ion-list-one" >			        
+					    <ion-item href="javascript:void(0)" ng-repeat="value in  data">			       					       
+							    <div class="item item-avatar item1" style="padding: 10px;">
+							            <span class="set-rank">{{$index+1}}</span>
+							            <div class="set-img-phb">
+								           <img  src='//pic.c-ctrip.com/VacationH5Pic/mice/dingzhi/mice_banner07.jpg' class="set-img-whb">
+								           <span class="set-phb-title">{{value.title}}</span>								           
+								        </div>
+								        <div class="set-number-phb">
+								        	 <span class="set-toupiao-number">{{value.toupiao}}</span>
+								        	 <button class="set-view-detail" ng-click="viewDetail($index)">查看</button>
+								        </div>
+								       
+								</div>
+					    </ion-item>	
+					    
+					    				     
+			    </ion-list> 
+			</div> 
+
+			<div  class="set-tips-message">
+			        <p>已经到底了</p>
+			 </div>
+		    
+			<div class="fs_top_btn" ng-click="scrollTop()">
+			 	
+			</div>
+
+  </ion-content>
+</ion-view>

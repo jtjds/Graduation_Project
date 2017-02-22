@@ -1,0 +1,36 @@
+<ion-view view-title="用户注册">
+  <ion-header-bar>
+    <h1 class="title">用户注册</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="startRegister()">
+      <div class="list" style="margin-top: 20px;">
+        <label class="item item-input" style="border: 1px solid #ccc;margin: 30px;">
+           <i class="ion ion-android-person"></i><span class="input-label">用户名</span>
+          <input type="text" ng-model="registerData.username">
+        </label>
+         <label class="item item-input" style="border: 1px solid #ccc;margin: 30px;">
+           <i class="ion ion-email-unread"></i><span class="input-label">邮箱</span>
+          <input type="text" ng-model="registerData.email">
+        </label>
+        <label class="item item-input" style="border: 1px solid #ccc;margin: 30px;" id="password-one">
+           <i class="ion ion-locked"></i><span class="input-label">密码</span>
+          <input type="password" ng-model="registerData.password  ">
+        </label>
+        <label class="item item-input" style="border: 1px solid #ccc;margin: 30px;" id="password-two">
+           <i class="ion ion-locked"></i><span class="input-label">确认密码</span>
+           <input type="password" ng-model="registerData.password2">
+        </label>
+        <label  >
+              <p style="margin-bottom: 15px;color: #ccc;text-align: center;">亲，还犹豫什么？现在开始注册吧！</p>
+              <button class="button  button-positive" type="submit"  id="loginIn" style="width: 100px;background-color:#fc9720;text-align: center;margin-left: 35%;opacity: 0.8 ">开始注册
+              </button>
+        </label>
+       
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

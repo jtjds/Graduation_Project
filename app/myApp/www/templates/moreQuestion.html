@@ -1,0 +1,71 @@
+<ion-view view-title="多选问卷列表">
+
+    <ion-content on-scroll="scrollFixed(e)" >
+
+		    <div  class="set-btn-all" id="set-btn-all">
+				    <button  type="button"  class="set-all-list l1 " ng-click="requestDate()" id="btn1">全部 </button> 
+				    <button  type="button"  class="set-all-list l2"  ng-click=requestComplete() id="btn2">已完成 </button>     
+				    <button  type="button"  class="set-all-list l3"  ng-click=requestInComplete() id="btn3">未完成 </button>
+				    <button  type="button"  class="set-all-list l4"  ng-click=requestDoing() id="btn4">进行中 </button>
+		    </div>
+		        
+			<ion-list style="display: block;" id="ion-list-one">			        
+					    <ion-item ng-repeat="value in data" href="#/app/timuListMore/{{value.id}}">			       					       
+							    <div class="item item-avatar">
+								        <img ng-src="{{value.url}}">
+								        <h3 style="color: #999;">
+								           <span>{{value.text}} </span> 
+								        </h3>
+								        <h3 class="set-wenjuan-list" style="color: #ccc;margin-top: 15px;">
+								            有效期：{{value.timeDate}}
+								            <span class="set-tagComplete">{{value.status}}</span>
+								            <span class="set-tagComplete btn-detail"  ng-if="value.statusid !== 1">进入答题</span>
+								            <span class="set-tagComplete btn-detail"  ng-if="value.statusid === 1">查看详情</span>
+								        </h3> 
+								</div>
+					    </ion-item>					     
+			</ion-list> 
+			<ion-list id="ion-list-two" style="display: none;">			        
+					    <ion-item ng-repeat="value in result" href="#/app/listItem/1">			       						       
+							    <div class="item item-avatar">
+								        <img ng-src="{{value.url}}">
+								        <h3 style="color: #999;">
+								           <span> {{value.text}} </span> 
+								        </h3>
+								        <h3 class="set-wenjuan-list" style="color: #ccc;margin-top: 15px;">
+								            有效期：{{value.timeDate}}
+								            <span class="set-tagComplete">{{value.status}}</span>
+								            <span class="set-tagComplete btn-detail"  ng-if="value.statusid !== 1">进入答题</span>
+								            <span class="set-tagComplete btn-detail"  ng-if="value.statusid === 1">查看详情</span>
+								        </h3> 
+
+								</div>
+					    </ion-item>					     
+			</ion-list> 
+
+			<div  class="set-tips-message">
+			        <p>已经到底了</p>
+			 </div>
+		    
+			<div class="fs_top_btn" ng-click="scrollTop()">
+			 	
+			</div>
+	
+    </ion-content>
+    <ion-footer-bar align-title="left" class="">
+            <div class="tabs tabs-icon-left">
+				  <a class="tab-item" href="#/app/playlists  ">
+				    <i class="icon ion-home"></i>
+				    首页
+				  </a>
+				  <a class="tab-item" href="#/app/personCenter">
+				    <i class="icon ion-star"></i>
+				    收藏
+				  </a>
+				  <a class="tab-item" href="#/app/personInfo">
+				    <i class="icon ion-person"></i>
+				    我
+				  </a>
+			</div>    
+    </ion-footer-bar>
+</ion-view>

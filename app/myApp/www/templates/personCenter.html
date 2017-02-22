@@ -1,0 +1,20 @@
+<ion-view view-title="收藏问卷">
+  <ion-content>
+           <ion-list>			        
+					    <ion-item ng-repeat="value in data" href="#/app/timuList/{{value.id}}">			       						       
+							    <div class="item item-avatar">
+								        <img ng-src="{{value.url}}">
+								        <h3 style="color: #999;">
+								           <span> {{value.text}} </span> 
+								        </h3>
+								        <h3 class="set-wenjuan-list" style="color: #ccc;margin-top: 15px;">
+								            有效期：{{value.timeDate}}
+								            <span class="set-tagComplete">{{value.status}}</span>
+								            <span class="set-tagComplete btn-detail">查看详情</span>
+								        </h3>
+
+								</div>
+					    </ion-item>					     
+			</ion-list>  
+  </ion-content>
+</ion-view>

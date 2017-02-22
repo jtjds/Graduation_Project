@@ -1,0 +1,46 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content >
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="set-side-menu">   
+    <ion-content class="set-background">    
+      <ion-list>
+          <div class="list set-list-menu" style="line-height: 60px;margin-top: 40px;">
+              <ion-item menu-close  href="#/app/login" style="border:0px;">
+                  <div  clas="set-menu-login" style="text-align: center;cursor:pointer;margin-top:10px;">
+                         <div class="set-img-login" style="margin-left: 32%;"></div>
+                         <p style="font-size: 17px;display: block" id="set-status" >请登录账号</p>
+                         <p style="font-size: 17px;display: none" id="set-status2">已登录</p>
+                  </div>
+              </ion-item>
+              <ion-item menu-close href="#/app/personInfo" style="border:0px;">
+                <i class="icon ion-person" ></i>
+                <span class="set-menu-icon"> 个人中心</span>
+              </ion-item>
+              <ion-item menu-close href="#/app/playlists" style="border:0px;">
+                <i class="icon ion-calendar"></i><span class="set-menu-icon">投票首页</span> 
+              </ion-item>
+              <ion-item menu-close href="#/app/browse" style="border:0px;">
+                 <i class="icon ion-pinpoint"></i><span class="set-menu-icon"> 试题资料</span>
+              </ion-item>
+              <ion-item menu-close href="#/app/personCenter" style="border:0px;">
+                 <i class="icon ion-star"></i><span class="set-menu-icon"> 个人收藏</span>
+              </ion-item>
+              <ion-item menu-close href="#/app/set" style="border:0px;">
+                 <i class="icon ion-locked"></i><span class="set-menu-icon"> 个人设置</span>
+              </ion-item>
+          </div>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
