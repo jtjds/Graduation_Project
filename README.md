@@ -5,5 +5,7 @@
  1.npm  install
  2.ionic  serve  
  
- 浏览器自动打开窗口，localhost:8001
+ 浏览器自动打开窗口，localhost:8100
+ 
+
  
