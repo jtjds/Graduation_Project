@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<conf>
+    <connectionStrings>
+    <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Graduation-20170225103148.mdf;Initial Catalog=aspnet-Graduation-20170225103148;Integrated Security=True"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+</conf>
