@@ -149,7 +149,7 @@ a{
 	background: #FA8072;
 }
 [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
-    background: #099fde;
+    background: #F75B60;
     color: #fff;
 }
 
