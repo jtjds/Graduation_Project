@@ -151,6 +151,7 @@ a{
 [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
     background: #F75B60;
     color: #fff;
+    height: 64px;
 }
 
 .bar.bar-header.item-input-inset{
@@ -162,34 +163,38 @@ a{
 }
 .left-item-t1{
 
-    width: 49%;
-    height: 150px;
+    width: 25%;
+    height: 100px;
     float: left;
     background: #fb667a;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 98%;
+    margin-left: 15px;
+    margin-top: 18px;
+    margin-right: 15px;
 
 }
 .content-left-item1{
 	margin: auto 4px;
 }
 .right-item-t1{
-	 width: 49%;
-    height: 150px;
+	 width: 25%;
+    height: 100px;
     float: right;
     background: #00cbd5;
      color: #fff;
-    border-radius: 5px;
+    border-radius: 98%;
 }
 .set-icon{
 	font-size: 40px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .person-padding{
 	font-size: 18px;
     text-align: center;
     margin-top: 4px;
+   
 }
 .item1{
     margin-top: 4px;
@@ -569,6 +574,13 @@ label, input, button, select, textarea {
 }
 .input-label{
 	margin-left: -15px;
+}
+.bar-footer {
+    bottom: 0;
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    background-position: top;
+    height: 64px;
 }
 
 
