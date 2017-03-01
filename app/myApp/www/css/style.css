@@ -26,7 +26,7 @@ a{
 }
 .button.button-positive {
     width: 100%;
-    background-color: #54B6E3;
+    background-color: #F75B60;
     opacity: 0.8;
 }
 .title.set-menu{
@@ -35,6 +35,7 @@ a{
 .bar.bar-stable .title {
     color: #fff;
     font-size: 20px;
+    margin-top: 10px;
 }
 .bar.bar-stable .set-menu{
 	color: #fff;
@@ -236,7 +237,7 @@ a{
     text-decoration: underline;
 }
 .button.button-positive.activated{
-    background-color: #54B6E3;
+    background-color: #F75B60;
     opacity: 0.8;
     border: 1px  solid  #fff;
 }
@@ -584,5 +585,9 @@ label, input, button, select, textarea {
 }
 .tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item {
     font-size: 18px;
+}
+.bar-stable .button.button-icon {
+    color: #fff;
+    margin-top: 6px;
 }
 
