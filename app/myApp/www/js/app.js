@@ -1,7 +1,7 @@
 // Ionic Starter App
 
 
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers','login'])
 
 .run(function($ionicPlatform,$rootScope,$state, $stateParams, $timeout) {
   $ionicPlatform.ready(function() {
