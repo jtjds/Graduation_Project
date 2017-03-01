@@ -1,73 +1,85 @@
-<ion-view view-title="<img class='title-image' src='img/logo.png' style='width:100px;color:#fff' />">
+<ion-view view-title="<p style='width:100px;color:#fff;margin-left: 60px;'><span style='font-weight:bold;'>江苏科技大学</span> 移动图书馆">
 
   <ion-content style="background: rgb(245, 245, 245)">		
 		    <ion-slide-box auto-play="true" does-continue="true" slide-interval=2000>
 				  <ion-slide>
 				   
-				    <img ng-src="//pic.c-ctrip.com/VacationH5Pic/mice/dingzhi/mice_banner07.jpg" style="height:230px;width:100%" alt="" src="//pic.c-ctrip.com/VacationH5Pic/mice/dingzhi/mice_banner07.jpg">
+				    <img ng-src="./img/66.jpg" style="height:230px;width:100%" alt="" src="./img/66.jpg">
 				   
 				  </ion-slide>
 				  <ion-slide>
 				    
-				    <img ng-src="http://7xiyf9.com1.z0.glb.clouddn.com//activity/201608/22/banner@2x.jpg" style="height:230px;width:100%" alt="" src="http://7xiyf9.com1.z0.glb.clouddn.com//activity/201608/22/banner@2x.jpg">
+				    <img ng-src="./img/77.jpg" style="height:230px;width:100%" alt="" src="./img/77.jpg">
 				  </ion-slide>
 				  <ion-slide on-slide-changed="slideHasChanged(index)">
 				   
-				    <img ng-src="http://7xiyf9.com1.z0.glb.clouddn.com/activity/banner/hs-banner.jpg" style="height:230px;width:100%" alt="" src="http://7xiyf9.com1.z0.glb.clouddn.com/activity/banner/hs-banner.jpg">
+				    <img ng-src="./img/55.jpg" style="height:230px;width:100%" alt="" src="./img/55.jpg">
 				  </ion-slide>
 		    </ion-slide-box>
 		   <!--   搜索栏 -->
-		    <div class="bar bar-header item-input-inset" >
+		   <!--  <div class="bar bar-header item-input-inset" >
 			    <label class="item-input-wrapper">
 			    <i class="icon ion-ios-search placeholder-icon"></i>
 			    <input type="search" placeholder="Search">			 
-		    </div> 
+		    </div>  -->
 
 		   <!--  设置四个div -->
 		    <div class="content-left-item1" style="text-align: center;">
-		    	 <a class="left-item-t1" href="#/app/personInfo">
-		    	     <i class="ion ion-android-person  set-icon"></i>
-		    	     <p class="person-padding">个人中心 </p>
+		    	 <a class="left-item-t1" href="#/app/personInfo" style="background: #F5DE42;">
+		    	     <i class="ion ion-search  set-icon"></i>
+		    	     <p class="person-padding">馆藏查询 </p>
 		    	 </a>
-		    	 <a class="right-item-t1" href="#/app/browse">
+		    	 <a class="left-item-t1" href="#/app/browse" style="background: #72CCC5;">
+		    	     <i class="ion  ion-android-person set-icon"></i>
+		    	     <p class="person-padding background-tp">个人中心 </p>
+		    	 </a>
+		    	 <a class="left-item-t1" href="#/app/browse" style="background: #6F8FE4;">
+		    	     <i class="ion  ion-chatbox-working set-icon"></i>
+		    	     <p class="person-padding background-tp">消息通知 </p>
+		    	 </a>
+		    </div><br>
+		    <div class="content-left-item1" style="text-align: center;">
+		    	 <a class="left-item-t1" href="#/app/personInfo" style="background: #F75B60;">
+		    	     <i class="ion ion-monitor  set-icon"></i>
+		    	     <p class="person-padding">数字资源 </p>
+		    	 </a>
+		    	 <a class="left-item-t1" href="#/app/browse" style="background: #64B75B;">
 		    	     <i class="ion  ion-ios-browsers set-icon"></i>
-		    	     <p class="person-padding background-tp">投票平台 </p>
+		    	     <p class="person-padding background-tp">图书预订 </p>
 		    	 </a>
-		    </div>
-		    <div class="content-left-item1 item1" style="text-align: center;">
-		    	 <a class="left-item-t1" style="margin-top:4px;background: #8ED168" href="#/app/paihangbang">
-		    	     <i class="ion  ion-social-buffer set-icon"></i>
-		    	     <p class="person-padding">排行榜 </p>
-		    	 </a>
-		    	 <a class="right-item-t1" style="margin-top:4px;background: #FCCB54" href="#/app/recommand">
-		    	     <i class="ion  ion-android-happy set-icon"></i>
-		    	     <p class="person-padding background-tp">意见反馈 </p>
+		    	 <a class="left-item-t1" href="#/app/browse" style="background: #FEC752;">
+		    	     <i class="ion  ion-ios-book set-icon"></i>
+		    	     <p class="person-padding background-tp">新书推荐 </p>
 		    	 </a>
 		    </div>
 
-		     <div class="content-left-item1 item1" style="text-align: center;">
-		    	 <a class="left-item-t1" style="margin-top:4px;background: #54B6E3;width: 100%;height: 80px;" href="#/app/aboutUs">
-		    	     <img  src="">
-		    	     <i class="ion  ion-person-stalker " style="margin-top: 30px;font-size: 22px;"></i>
-		    	     <span class="person-padding">关于我们 </span>
+		    <div class="content-left-item1" style="text-align: center;">
+		    	 <a class="left-item-t1" href="#/app/personInfo" style="background: #BADA4B;">
+		    	     <i class="ion ion-ios-people   set-icon"></i>
+		    	     <p class="person-padding">社交 </p>
 		    	 </a>
-		    </div>
+		    	  <a class="left-item-t1" href="#/app/personInfo" style="background: #6F8FE4;">
+		    	     <i class="ion ion-ios-keypad  set-icon"></i>
+		    	     <p class="person-padding">其它 </p>
+		    	 </a>
+		    	
+		    </div><br><br>
 
   </ion-content>
 
    <ion-footer-bar align-title="left" class="">
-		<div class="tabs tabs-icon-left">
-		  <a class="tab-item" href="#/app/playlists  ">
-		    <i class="icon ion-home"></i>
-		    首页
-		  </a>
-		  <a class="tab-item" href="#/app/personCenter">
+		<div class="tabs tabs-icon-left" style="height: 64px;background: #3D3D4F;color:#fff;">
+		 <a class="tab-item" href="#/app/personCenter">
 		    <i class="icon ion-star"></i>
 		    收藏
 		  </a>
+		  <a class="tab-item" href="#/app/playlists  ">
+		    <i class="icon ion-home"></i>
+		    首页
+		  </a> 
 		  <a class="tab-item" href="#/app/personInfo">
-		    <i class="icon ion-person"></i>
-		    我
+		    <i class="icon ion-gear-b"></i>
+		    设置
 		  </a>
 		</div>
     </ion-footer-bar>
