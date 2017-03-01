@@ -191,7 +191,7 @@ a{
     margin-top: 20px;
 }
 .person-padding{
-	font-size: 18px;
+	font-size: 14px;
     text-align: center;
     margin-top: 4px;
    
@@ -582,5 +582,7 @@ label, input, button, select, textarea {
     background-position: top;
     height: 64px;
 }
-
+.tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item {
+    font-size: 18px;
+}
 
