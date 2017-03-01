@@ -60,6 +60,9 @@
     <Analyzer Include="..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" />
     <Analyzer Include="..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BookManager\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
