@@ -15,15 +15,15 @@ angular.module('starter.login', [])
            var  loginObj = {};
            loginObj = $scope.loginData;
            console.log(JSON.stringify(loginObj));
-           if($scope.loginData.username == null && $scope.loginData.password == null){
+           if($scope.loginData.userName == null && $scope.loginData.passWord == null){
               var alertPopup = $ionicPopup.alert({
                   template: "您还没有登录，请登录！"
               });
-           } else if($scope.loginData.username != null && $scope.loginData.password == null){
+           }else if($scope.loginData.userName != null && $scope.loginData.passWord == null){
               var alertPopup = $ionicPopup.alert({
                   template: "您还没有输入密码，请输入密码！"
               });
-           } else if($scope.loginData.username == null && $scope.loginData.password != null){
+           } else if($scope.loginData.userName == null && $scope.loginData.passWord != null){
               var alertPopup = $ionicPopup.alert({
                   template: "您还没有输入用户名，请输入用户名！"
               });
@@ -94,29 +94,31 @@ angular.module('starter.login', [])
            disableBack: true
       });
       $scope.registerData = {};
+
       $scope.startRegister = function(){
           console.log($scope.registerData );
           var registerObj = {};
           registerObj = $scope.registerData;
-          if($scope.registerData == null){
+          console.log(JSON.stringify(registerObj));
+          if($scope.registerData.userName == null && $scope.registerData.passWord == null && $scope.registerData.userEmail == null &&  $scope.registerData.passWord == null){
               var alertPopup = $ionicPopup.alert({
-                  template: "您还没有登录，请登录！"
+                  template: "您还没有填写任何信息哦！"
               });
-           } else if($scope.registerData.email == null && $scope.registerData.username != null && $scope.registerData.password2 != null && $scope.registerData.password != null){
+           } else if($scope.registerData.userEmail == null && $scope.registerData.userName != null && $scope.registerData.confirmPassword != null && $scope.registerData.passWord != null){
               var alertPopup = $ionicPopup.alert({
                   template: "您还没有输入邮箱，请输入邮箱！"
-              });
-           } else if($scope.registerData.password == null && $scope.registerData.email != null && $scope.registerData.username != null){
+              });   
+           } else if($scope.registerData.passWord == null && $scope.registerData.userEmail != null && $scope.registerData.userName != null){
               var alertPopup = $ionicPopup.alert({
                   template: "您还没有输入密码，请输入密码！"
               });
-           }else if($scope.registerData.password2 == null && $scope.registerData.password != null && $scope.registerData.email != null && $scope.registerData.username != null){
+           }else if($scope.registerData.confirmPassword == null && $scope.registerData.passWord != null && $scope.registerData.userEmail != null && $scope.registerData.userName != null){
                 var alertPopup = $ionicPopup.alert({
                   template: "您还没有输入密码，请确认密码！"
               });
            } else if($scope.registerData != null){          
                   $http({  
-                        url : "http://10.32.33.4:8080/ivotel-examuser/registe",  
+                        url : "",  
                         method : "post",
                         params :  registerObj,
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }
