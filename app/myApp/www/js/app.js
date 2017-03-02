@@ -1,10 +1,10 @@
 // Ionic Starter App
 
 
-angular.module('starter', ['ionic', 'starter.controllers','login'])
+angular.module('starter', ['ionic', 'starter.controllers','starter.login','starter.search','starter.personCenter','bookOrder','correct','messageForm','numberSource','newBookRecommand','shejiao','others','set'])
 
 .run(function($ionicPlatform,$rootScope,$state, $stateParams, $timeout) {
-  $ionicPlatform.ready(function() {
+  $ionicPlatform.ready(function() { 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -35,15 +35,7 @@ angular.module('starter', ['ionic', 'starter.controllers','login'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/personCenter',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/personCenter.html',
-        controller:'personCenterCtrl'
-      }
-    }
-  })
+ 
     .state('app.LoginIn', {
     url: '/LoginIn',
     views: {
@@ -53,7 +45,7 @@ angular.module('starter', ['ionic', 'starter.controllers','login'])
       }
     }
   })
-    .state('app.login', {
+  .state('app.login', {
     url: '/login',
     views: {
       'menuContent': {
@@ -63,72 +55,6 @@ angular.module('starter', ['ionic', 'starter.controllers','login'])
     }
   })
 
-   .state('app.aboutUs', {
-    url: '/aboutUs',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/aboutUs.html'
-      }
-    }
-  })
-
-    .state('app.personInfo', {
-    url: '/personInfo',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/personInfo.html'
-      }
-    }
-  })
-
-    .state('app.recommand', {
-    url: '/recommand',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/recommand.html',
-        controller:'recommandCtrl'
-      }
-    }
-  })
-
-  .state('app.paihangbang', {
-    url: '/paihangbang',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/paihangbang.html',
-        controller:'paihangbangCtrl'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html',
-          controller:'browseCtrl'
-        }
-      }
-    })
-
-   .state('app.moreQuestion', {
-      url: '/moreQuestion',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/moreQuestion.html',
-          controller:'moreQuestionCtrl'
-        }
-      }
-    })
-    .state('app.answerQuestion', {
-      url: '/answerQuestion',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/answerQuestion.html',
-          controller:'answerQuestionCtrl'
-        }
-      }
-    })
     .state('app.playlists', {
       url: '/playlists',
       views: {
@@ -138,68 +64,94 @@ angular.module('starter', ['ionic', 'starter.controllers','login'])
         }
       }
     })
-
-    .state('app.timuList', {
-        url: '/timuList/:timuId',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/timuList.html',
-            controller:'timuListCtrl'
-          }
+    
+    .state('app.library_search', {
+      url: '/library_search',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/library_search.html',
+          controller: 'library_searchCtrl'
         }
-    })
-
-    .state('app.listItem', {
-        url: '/listItem/:timuId',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/listItem.html',
-            controller:'listItemCtrl'
-          }
-        }
-    })
-
-      .state('app.timuListAnswerQuestion', {
-        url: '/timuListAnswerQuestion/:timuId',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/timuListAnswerQuestion.html',
-            controller:'timuListAnswerQuestionCtrl'
-          }
-        }
-    })
-        .state('app.timuListMore', {
-        url: '/timuListMore/:timuId',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/timuListMore.html',
-            controller:'timuListMoreCtrl'
-          }
-        }
-    })
-
-    .state('app.choose', {
-        url: '/choose/:timuId',
-        views: {
-           'menuContent': {
-            templateUrl: 'templates/choose.html',
-            controller:'chooseCtrl'          
-          }
-        }
-    })
-
-  .state('app.set', {
-    url: '/set',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/set.html',
-        controller:'setCtrl'
-       
       }
-    }
+    })
+    .state('app.personCenter', {
+      url: '/personCenter',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/personCenter.html',
+          controller: 'personCenterCtrl'
+        }
+      }
+    })
+    .state('app.messageForm', {
+      url: '/messageForm',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/messageForm.html',
+          controller: 'messageFormCtrl'
+        }
+      }
+    })
+    .state('app.numberSource', {
+      url: '/numberSource',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/numberSource.html',
+          controller: 'numberSourceCtrl'
+        }
+      }
+    }).state('app.bookOrder', {
+      url: '/bookOrder',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/bookOrder.html',
+          controller: 'bookOrderCtrl'
+        }
+      }
+    }).state('app.newBookRecommand', {
+      url: '/newBookRecommand',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/newBookRecommand.html',
+          controller: 'newBookRecommandCtrl'
+        }
+      }
+    }).state('app.shejiao', {
+      url: '/shejiao',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/shejiao.html',
+          controller: 'shejiaoCtrl'
+        }
+      }
+    }).state('app.others', {
+      url: '/others',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/others.html',
+          controller: 'othersCtrl'
+        }
+      }
+    }).state('app.set', {
+      url: '/set',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/set.html',
+          controller: 'setCtrl'
+        }
+      }
+    }).state('app.correct', {
+      url: '/correct',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/correct.html',
+          controller: 'correctCtrl'
+        }
+      }
+    })
 
-
-  });
+ 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
+
 });

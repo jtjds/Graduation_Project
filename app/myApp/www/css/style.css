@@ -590,4 +590,8 @@ label, input, button, select, textarea {
     color: #fff;
     margin-top: 6px;
 }
+.slider {
+   
+    top: 20px;
+}
 

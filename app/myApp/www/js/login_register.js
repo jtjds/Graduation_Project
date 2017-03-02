@@ -1,7 +1,7 @@
 
 //登录注册模块js文件
 
-angular.module('login', [])
+angular.module('starter.login', [])
 //登录
 .controller('loginCtrl',['$scope','$ionicPopup', '$timeout', '$stateParams','$http','$ionicScrollDelegate','$location','$window' ,'$ionicHistory',function($scope, $ionicPopup, $timeout,$stateParams,$http,$ionicScrollDelegate,$location,$window,$ionicHistory){
     

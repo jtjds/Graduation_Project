@@ -1,0 +1,13 @@
+//馆藏查询
+
+angular.module('starter.search', [])
+
+.controller('library_searchCtrl',['$scope','$ionicPopup', '$timeout', '$stateParams','$http','$ionicScrollDelegate','$location','$window' ,'$ionicHistory',function($scope, $ionicPopup, $timeout,$stateParams,$http,$ionicScrollDelegate,$location,$window,$ionicHistory){
+    
+    console.log('jt');
+  
+}])
+
+
+       
+
