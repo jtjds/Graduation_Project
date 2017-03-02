@@ -13,7 +13,16 @@
 *.chk
 
 *.sln
-Server/Graduation/
+Server/Graduation/Models/*
+Server/Graduation/Views/*
+Server/Graduation/Scripts/*
+Server/Graduation/Content/*
+Server/Graduation/fonts/*
+Server/Graduation/App_Code/*
+Server/Graduation/App_Data/*
+Server/Graduation/App_Start/*
+Server/Graduation/*.config
 Server/packages/
 Server/.vs/
+app/*
 

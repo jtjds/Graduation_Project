@@ -31,7 +31,7 @@ angular.module('starter.login', [])
                  //发送数据
                   $http({  
                         //url : "http://10.32.33.133:8080/login",  
-                        url : "http://10.32.33.4:8080/ivotel-examuser/login", 
+                        url : " ", 
                         method : "post",
                         params :  loginObj,
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
@@ -40,12 +40,14 @@ angular.module('starter.login', [])
                   }).success(function(data) {  
                       
                        console.log(data);
+                       //如果用户不存在，返回登录界面
                        if (data.code === 0) {
 
                            console.log('code'+data.code);
                            $location.path('#/app/login');
                        }
-                      if(data.code == "100"){
+                      //如果用户账号正确，返回首页
+                      if(data.code == "200"){
                           $location.path("#/app/playlists");
                           //$ionicHistory.goBack(-2);              
                          // $window.location.reload();
