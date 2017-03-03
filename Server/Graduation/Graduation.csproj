@@ -47,6 +47,9 @@
     <Reference Include="Graduation.BusinessLogic">
       <HintPath>..\Graduation.BusinessLogic\bin\Debug\Graduation.BusinessLogic.dll</HintPath>
     </Reference>
+    <Reference Include="Graduation.Common">
+      <HintPath>..\Graduation.Common\bin\Debug\Graduation.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Graduation.Model">
       <HintPath>..\Graduation.Model\bin\Debug\Graduation.Model.dll</HintPath>
     </Reference>
@@ -193,6 +196,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Pages\TestPost.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

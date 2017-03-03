@@ -36,6 +36,9 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Graduation.Common">
+      <HintPath>..\Graduation.Common\bin\Debug\Graduation.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Graduation.Data">
       <HintPath>..\Graduation.Data\bin\Debug\Graduation.Data.dll</HintPath>
     </Reference>
@@ -52,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserManager\Login.cs" />
     <Compile Include="UserManager\Register.cs" />
