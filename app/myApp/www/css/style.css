@@ -114,7 +114,7 @@ a{
 }
 .item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
     top: 14px;
-    left: 15px;
+    left: 25px;
     max-width: 50px;
     max-height: 50px;
 }
@@ -593,5 +593,12 @@ label, input, button, select, textarea {
 .slider {
    
     top: 20px;
+}
+
+.bar.item-input-inset .item-input-wrapper input {
+    padding-left: 8px;
+    width: 94%;
+    height: 38px;
+    background: transparent;
 }
 
