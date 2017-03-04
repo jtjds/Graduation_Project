@@ -4,7 +4,7 @@
 		    <div class="bar bar-header item-input-inset" style="position: relative;width: 100%;margin-top:30px;margin-bottom: 10px;">
 					    <label class="item-input-wrapper" style="">
 						    <i class="icon ion-ios-search placeholder-icon"></i>
-						    <input type="search" placeholder="Search">
+						    <input type="search" placeholder="作者/书名">
 						</label>
 					    <button  type="button"  class="set-all-list l1" ng-click="search()" style="height:42px;">查询 </button> 			 
 			</div>
@@ -16,8 +16,8 @@
 								    <div class="set-library-content">
 	                                     <div class="name-top">{{value.bookName}}</div>
 	                                     <div class="author-bottom">
-	                                        <span style="color:#ccc;margin-right: 20px;">作者：{{value.author}}</span>
-                                            <button  type="button"  class="set-all-list l1" style="height:30px;height: 30px;line-height: 1px;">查看详情 </button>
+	                                        <span style="margin-right: 0px;color:#ccc;">作者：</span>{{value.author}}
+                                            <button  type="button"  class="set-all-list l1" style="height:30px;height: 30px;line-height: 1px;" ng-click="showDetail($index)">查看详情 </button>
                                             <button  type="button"  class="set-all-list l1" ng-click="search()" style="height:30px;height: 30px;line-height: 1px;">浏览 </button>
 	                                     </div>
 								    </div>							       
@@ -26,18 +26,18 @@
 			</ion-list> 
     </ion-content>
     <ion-footer-bar align-title="left" class="">
-		<div class="tabs tabs-icon-left" style="height: 64px;background: #3D3D4F;color:#fff;">
-		 <a class="tab-item" href="#/app/correct">
-		    <i class="icon ion-star"></i>
-		    收藏
+		<div class="tabs tabs-icon-left" style="height: 50px;background: #3D3D4F;color:#fff;">
+		 <a class="tab-item" >
+		    <i class="icon ion-map"></i>
+		    综合
 		  </a>
-		  <a class="tab-item" href="#/app/playlists  ">
-		    <i class="icon ion-home"></i>
-		    首页
+		  <a class="tab-item" >
+		    <i class="icon ion-pin"></i>
+		    筛选
 		  </a> 
-		  <a class="tab-item" href="#/app/set">
-		    <i class="icon ion-gear-b"></i>
-		    设置
+		  <a class="tab-item">
+		    <i class="icon ion-heart"></i>
+		    欢迎度排序
 		  </a>
 		</div>
     </ion-footer-bar>

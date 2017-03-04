@@ -211,10 +211,10 @@ a{
     height: 100px;
     border: 4px solid #ccc;
     border-radius: 50%;
-    background: url('https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1478860508&di=18f4876c01ab8adc3941bf10f7acaa34&src=http://a.jinxun.cc/uploads/allimg/161009/0149212051-2.jpg');
+    background: url('../img/ajam.jpg');
 }
 .set-background{
-	background: url('http://pic.58pic.com/58pic/12/32/63/49w58PICNFz.jpg') repeat-y;
+	background:rgb(245, 245, 245);
 }
 .item {
    background-color: transparent;
@@ -228,7 +228,7 @@ a{
 	background-color: transparent;
 }
 .set-background{
-	 background: linear-gradient(rgba(84,182,227,0),rgba(84,182,227,0.8));
+	/*  background: linear-gradient(rgba(84,182,227,0),rgba(84,182,227,0.8)); */
 }
 .set-login-pass{
 	float: right;
@@ -581,10 +581,10 @@ label, input, button, select, textarea {
     border-top-width: 1px;
     border-bottom-width: 0;
     background-position: top;
-    height: 64px;
+    height: 44px;
 }
 .tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item {
-    font-size: 18px;
+    font-size: 14px;
 }
 .bar-stable .button.button-icon {
     color: #fff;
