@@ -16,6 +16,13 @@ namespace Graduation
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //启动时配置Log4Net
+            log4net.Config.XmlConfigurator.Configure();
+        }
+
+        protected void Application_Error()
+        {
+            Common.LogHelper.WriteLog(HttpContext.Current.Error.Message, HttpContext.Current.Error);
         }
     }
 }

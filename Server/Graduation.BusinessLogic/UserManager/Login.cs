@@ -45,13 +45,14 @@ namespace Graduation.BusinessLogic.UserManager
             if (findUser != null)
             {
                 status.Code = 200;
-                status.Msg = "Success";
+                status.Msg = Res.Resource.SUCCESS.ToString();
             }
             else
             {
                 status.Code = 404;
-                status.Msg = "Fail";
+                status.Msg = Res.Resource.NOTFOUND.ToString();
             }
+            LogHelper.WriteLog(status.Msg);
             return status;
         }
 

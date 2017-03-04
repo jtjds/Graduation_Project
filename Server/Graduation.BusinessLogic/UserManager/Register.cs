@@ -43,13 +43,14 @@ namespace Graduation.BusinessLogic.UserManager
             {
                 _userDb.SaveChanges();
                 status.Code = 200;
-                status.Msg = "Success";
+                status.Msg = Res.Resource.SUCCESS.ToString();//成功
             }
             else
             {
-                status.Code = 404;
-                status.Msg = "Fail";//服务器错误
+                status.Code = 500;
+                status.Msg = Res.Resource.ERROR.ToString();//服务器错误
             }
+            LogHelper.WriteLog(status.Msg);
             return status;
         }
 

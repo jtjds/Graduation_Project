@@ -20,6 +20,7 @@ namespace Graduation.Controllers.UserController
         {
             Status msg = new Status();
             UserLogin login = new UserLogin();
+            string request=(HttpContext.Items["param"].ToString())==null?string.Empty: (HttpContext.Items["param"].ToString());
             string data = string.Empty;
             if (Request.IsAjaxRequest())
             {
@@ -30,7 +31,7 @@ namespace Graduation.Controllers.UserController
             if (string.IsNullOrEmpty(data))
             {
                 msg.Code = 500;
-                msg.Msg = "参数为空";
+                msg.Msg = Res.Resource.PARAMETERISNULL.ToString();
                 return Json(msg, JsonRequestBehavior.AllowGet);
             }
             Users user = login.GetUserFromJson(data);
@@ -38,6 +39,7 @@ namespace Graduation.Controllers.UserController
             msg=login.DoLogin();
             return Json(msg, JsonRequestBehavior.AllowGet);
         }
+
 
         [HttpPost]
         public JsonResult Register()
@@ -53,7 +55,7 @@ namespace Graduation.Controllers.UserController
             if (string.IsNullOrEmpty(data))
             {
                 msg.Code = 500;
-                msg.Msg = "参数为空";
+                msg.Msg = Res.Resource.PARAMETERISNULL.ToString();
                 return Json(msg, JsonRequestBehavior.AllowGet);
             }
             Users user=register.GetUserFromJson(data);
