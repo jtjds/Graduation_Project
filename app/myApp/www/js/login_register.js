@@ -30,19 +30,18 @@ angular.module('starter.login', [])
            } else if($scope.loginData  != null){         
                  //发送数据
                   $http({  
-                        //url : "http://10.32.33.133:8080/login",  
-                        url : " ", 
-                        method : "post",
-                        params :  loginObj,
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-                        withCredentials :true
+                         
+                        url : "../data/login.json", 
+                        method : "get"
+                       // params :  loginObj,
+                        //headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+                       // withCredentials :true
                        
                   }).success(function(data) {  
                       
                        console.log(data);
                        //如果用户不存在，返回登录界面
                        if (data.code === 0) {
-
                            console.log('code'+data.code);
                            $location.path('#/app/login');
                        }
@@ -118,10 +117,10 @@ angular.module('starter.login', [])
               });
            } else if($scope.registerData != null){          
                   $http({  
-                        url : "",  
-                        method : "post",
-                        params :  registerObj,
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }
+                        url : "../data/loginIn.json",  
+                        method : "get"
+                        // params :  registerObj,
+                        // headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }
 
                   }).success(function(data) { 
                       if(data.code == "201"){
