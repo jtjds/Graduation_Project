@@ -218,6 +218,7 @@ a{
 }
 .item {
    background-color: transparent;
+
    
 }
 .actived{
@@ -264,12 +265,12 @@ a{
 }
 
 .person-info h2 {
-    margin: 0 0 2px 0;
+    margin: 0 0 16px 0;
     font-size: 16px;
     font-weight: normal;
 }
 .set-marginLeft-200{
-	margin-left: -65%;
+	margin-left: 40px;
 
 }
 .set-marginLeft-340{

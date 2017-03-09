@@ -1,6 +1,52 @@
 <ion-view view-title="个人中心">
-  <ion-content >
-		   
+    <ion-content class="account">
+		<div class="list">
+		  <div class="item item-divider"></div>
 
+	    <a class="item item-avatar person-info" href="#">
+	      <img src="../img/ajam.jpg">
+	      <h2>Tammy</h2>
+	      <p>Hello  EveryOne</p>
+	    </a>
+
+		  <div class="item item-divider"></div>
+
+		  <a class=" item-icon-left person-info" href="#">
+				<i class="icon ion-ios-heart assertive"></i>
+		        <span  class="set-marginLeft-200">我的收藏</span>
+		      
+		  </a>
+
+		  <div class="item item-divider"></div>
+
+		  <a class=" item-icon-left person-info" href="#">
+				<i class="icon ion-email-unread"></i>
+		        <span  class="set-marginLeft-200">我的邮箱</span>
+		  </a>
+		  <a class=" item-icon-left person-info" href="#">
+				<i class="icon ion-forward calm"></i>
+		        <span  class="set-marginLeft-200">分享好友</span> 
+		  </a>
+
+		  <div class="item item-divider"></div>
+
+		  <a class=" item-icon-left person-info" href="#/app/set">
+				<i class="icon ion-ios-gear positive"></i>
+		        <span  class="set-marginLeft-200">设置</span>
+		  </a>
+	    <a class="item-icon-left person-info" ng-model="nightMode.nightModeOn">
+				<i class="icon ion-ios-moon dark"></i>
+	            <span  class="set-marginLeft-200">夜间</span>
+	    </a>
+	    <div class="item item-divider"></div>
+	    <a class=" item-icon-left person-info" href="#/app/set">
+				<i class="icon ion-locked"></i>
+		        <span  class="set-marginLeft-200">修改登录密码</span>
+		</a>
+
+		</div>
+		<label class="item">
+                      <button class="button  button-positive set-login" ng-click = "refeshSignOut()" type="submit" style="background-color: #fc9720;width:200px;">退出登录</button>
+        </label>	
   </ion-content>
 </ion-view>

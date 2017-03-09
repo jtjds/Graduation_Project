@@ -1,6 +1,31 @@
 <ion-view view-title="设置">
-  <ion-content >
-		   
+     <ion-content class="account">
+		<div class="list">
+				  <p class="sys_set">系统设置</p>
+		         <!--  <div class="item item-divider"></div> -->
 
+				  <a class=" item-icon-right person-info set-size-13px" href="#">
+						<i class="icon ion-ios-arrow-right"></i>
+				        <span  class="">评分</span>
+				  </a>
+
+				  
+
+				  <a class=" item-icon-right person-info set-size-13px" href="#">
+						<i class="icon ion-ios-arrow-right"></i>
+				        <span  class="">意见反馈</span> 
+				  </a>
+				  <a class=" item-icon-right person-info set-size-13px" href="#">
+						<i class="icon ion-ios-arrow-right "></i>
+				        <span  class="">启动页</span>
+				  </a>
+			    <a class=" item-icon-right person-info set-size-13px" ng-model="nightMode.nightModeOn">
+						<i class="icon ion-ios-arrow-right"></i>
+			            <span  class="">版本</span>
+			    </a>
+			    <label class="item">
+                      <button class="button  button-positive set-login" ng-click = "refeshSignOut()" type="submit" style="background-color: #fc9720">注销登录</button>
+                </label>	           
+		</div> 
   </ion-content>
 </ion-view>
