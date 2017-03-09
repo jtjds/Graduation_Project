@@ -6,24 +6,10 @@
 	   	            <a href="#" target="_blank">&gt;&gt;更多</a>
 	   	        </em>
 	   	   </h2>
-	   	   <ul>
-	   	   	   <li>
-	   	   	   	    <a href="http://pan.baidu.com/share/link?shareid=1154357811&amp;uk=3223696956" target="_blank"><img src="../img/ajaxwqsc.jpg" alt="css web设计高级教程" style="width: 80px;height: 103px;"></a>
-	   	   	   </li> 
-	   	   	   <li>
-	   	   	   	    <a href="http://pan.baidu.com/share/link?shareid=1154357811&amp;uk=3223696956" target="_blank"><img src="../img/angularjskfxyd.jpg" alt="css web设计高级教程" style="width: 80px;height: 103px;"></a>
-	   	   	   </li> 
-	   	   	   <li>
-	   	   	   	    <a href="http://pan.baidu.com/share/link?shareid=1154357811&amp;uk=3223696956" target="_blank"><img src="../img/bxgzldm.jpg" alt="css web设计高级教程" style="width: 80px;height: 103px;"></a>
-	   	   	   </li>
-	   	   	   <li>
-	   	   	   	    <a href="http://pan.baidu.com/share/link?shareid=1154357811&amp;uk=3223696956" target="_blank"><img src="http://www.linqing07.com/images/books/cssbhzm.jpg" alt="css web设计高级教程" style="width: 80px;height: 103px;"></a>
-	   	   	   </li> 
-	   	   	   <li>
-	   	   	   	    <a href="http://pan.baidu.com/share/link?shareid=1154357811&amp;uk=3223696956" target="_blank"><img src="http://www.linqing07.com/images/books/bxkwhjs.jpg" alt="css web设计高级教程" style="width: 80px;height: 103px;"></a>
-	   	   	   </li> 
-	   	   	  
-	   	   	    
+	   	   <ul  >
+	   	   	   <li ng-repeat="book  in  bookList">
+	   	   	   	    <a href="{{book.link}}" target="_blank"><img ng-src="{{book.url}}"  alt="{{book.alt}}" style="width: 80px;height: 103px;"></a>
+	   	   	   </li>    	   	    
 	   	   </ul>
 	   	   <div class="clear"></div>
 
