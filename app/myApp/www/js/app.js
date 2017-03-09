@@ -1,7 +1,7 @@
 // Ionic Starter App
 
 
-angular.module('starter', ['ionic', 'starter.controllers','starter.login','starter.search','starter.personCenter','bookOrder','correct','messageForm','numberSource','newBookRecommand','shejiao','others','set'])
+angular.module('starter', ['ionic', 'starter.controllers','starter.login','starter.search','starter.personCenter','bookOrder','correct','messageForm','numberSource','newBookRecommand','shejiao','others','set','MyLibrary'])
 
 .run(function($ionicPlatform,$rootScope,$state, $stateParams, $timeout) {
   $ionicPlatform.ready(function() { 
@@ -51,6 +51,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.login','start
       'menuContent': {
        templateUrl: 'templates/login.html',
        controller:'loginCtrl'
+      }
+    }
+  })
+  .state('app.MyLibrary', {
+    url: '/MyLibrary',
+    views: {
+      'menuContent': {
+       templateUrl: 'templates/MyLibrary.html',
+       controller:'MyLibraryCtrl'
       }
     }
   })
