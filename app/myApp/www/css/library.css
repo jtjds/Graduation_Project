@@ -1,0 +1,83 @@
+.item {
+    padding: 2px;
+}
+.set-library-content{
+    float: right;
+    margin-left: 0px;
+    width: 80%;
+    height: 66px;
+   
+}
+.name-top{
+    font-size: 15px;
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 4px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sys_set{
+    margin-top: 30px;
+    margin-left: 20px;
+    color: #666;
+    font-size: 14px;
+}
+.mb_left{
+    width:46%;
+    
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 10px;
+    float: left;
+    background: #72CCC5;
+}
+.mb_right{
+    float:right ;
+    width: 46%;
+    height: 200px;
+    margin-top: 30px;
+   
+    margin-right: 10px;
+}
+.mb_right .c_password{
+    width: 100%;
+    height: 100px;
+   
+    margin: 0px;
+}
+.mb_right .c_password .l_pass{
+    width: 47%;
+    height: 100%;
+    float: left;
+    background: #78BFEF;
+}
+.mb_right .c_password .l_command{
+    width: 47%;
+    height: 100%;
+    background: #FEC752;
+    float: right;
+}
+.mb_right .c_contact{
+    width: 100%;
+    height: 90px;
+    background: #BADA4B;
+    margin-top: 10px;
+}
+.a_info {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 45%;
+
+}
+.d_common {
+   margin-left: 35%;
+} 
+.d_common_size {
+    font-size: 15px;
+    margin-left: 15px;
+}
+.m_20 {
+    margin-left: 60px;
+}
