@@ -117,6 +117,7 @@ a{
     left: 25px;
     max-width: 50px;
     max-height: 50px;
+    border-radius: 0px;
 }
 .set-left-h2{
 	margin-left: -80px;

@@ -116,3 +116,11 @@ ol, ul {
 .clear{
     clear: both;
 }
+.icon_size{
+    font-size: 15px;
+}
+.re_con{
+    margin-left: 100px;
+    line-height: 7px;
+    margin-top: 5px;
+}

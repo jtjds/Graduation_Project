@@ -1,6 +1,31 @@
 <ion-view view-title="新书推荐">
   <ion-content >
-		   
-
+        <div class="list" style="margin-top:30px;">
+		    <a class=" item-icon-right person-info" href="#" ng-repeat="bookRecommand in recommandBookList">
+				<i class="icon ion-chevron-right icon_size" style="font-size:14px;"></i>
+		        <img ng-src="{{bookRecommand.img}}" style="float:left;width:60px;height:60px">
+		        <div class="re_con">
+				    <P>{{bookRecommand.bookName}}</P>
+				    <p style="margin-left: 20px;">{{bookRecommand.bookAuthor}}<span style="margin-left: 20px;">著</span></p>
+				    <p>{{bookRecommand.chubanshe}}</p>	
+				</div>      
+		    </a>		    
+		</div>
   </ion-content>
+   <ion-footer-bar align-title="left" class="">
+		<div class="tabs tabs-icon-left" style="height: 50px;background: #3D3D4F;color:#fff;">
+		 <a class="tab-item" href="#/app/correct">
+		    <i class="icon ion-star"></i>
+		    收藏
+		  </a>
+		  <a class="tab-item" href="#/app/playlists  ">
+		    <i class="icon ion-home"></i>
+		    首页
+		  </a> 
+		  <a class="tab-item" href="#/app/set">
+		    <i class="icon ion-gear-b"></i>
+		    设置
+		  </a>
+		</div>
+    </ion-footer-bar>
 </ion-view>
