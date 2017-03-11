@@ -1,6 +1,30 @@
 <ion-view view-title="消息通知">
   <ion-content >
-		   
-
+         <div class="list" style="margin-top:30px;">
+		    <a class=" item-icon-right person-info" href="#" ng-repeat="messageItem in messageList">
+		        <div class="message_top">
+				   <span class="icon ion-chevron-right icon_size" style="font-size:14px;margin-top: -15px;"></span>
+				   <p class="message" ng-if="messageItem.isChecked == true">【亲爱的{{messageItem.message}}同学】<span style="margin-left: 50px;">{{messageItem.date}}</span></p>
+				    <p class="message color" ng-if="messageItem.isChecked == false" >【亲爱的{{messageItem.message}}同学】<span style="margin-left: 50px;">{{messageItem.date}}</span></p>
+                </div>
+                <div class="message_bottom">{{messageItem.text}}</div>						        
+		    </a>		    
+		</div>
   </ion-content>
+   <ion-footer-bar align-title="left" class="">
+		<div class="tabs tabs-icon-left" style="height: 50px;background: #3D3D4F;color:#fff;">
+		 <a class="tab-item" href="#/app/correct">
+		    <i class="icon ion-star"></i>
+		    收藏
+		  </a>
+		  <a class="tab-item" href="#/app/playlists  ">
+		    <i class="icon ion-home"></i>
+		    首页
+		  </a> 
+		  <a class="tab-item" href="#/app/set">
+		    <i class="icon ion-gear-b"></i>
+		    设置
+		  </a>
+		</div>
+    </ion-footer-bar>
 </ion-view>

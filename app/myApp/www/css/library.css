@@ -124,3 +124,21 @@ ol, ul {
     line-height: 7px;
     margin-top: 5px;
 }
+.taggle{
+    position: absolute;
+    background: red;
+    top: 270px;
+    right: 35px;
+    color: #fff;
+    border-radius: 15px;
+    padding: 7px;
+}
+.message{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 290px;
+}
+.color{
+    color: #6F8FE4;
+}
