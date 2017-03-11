@@ -26,7 +26,7 @@ a{
 }
 .button.button-positive {
     width: 100%;
-    background-color: #F75B60;
+    background-color: #6F8FE4;
     opacity: 0.8;
 }
 .title.set-menu{
@@ -151,7 +151,7 @@ a{
 	background: #FA8072;
 }
 [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
-    background: #F75B60;
+    background: #6F8FE4;
     color: #fff;
     height: 64px;
 }
@@ -239,7 +239,7 @@ a{
     text-decoration: underline;
 }
 .button.button-positive.activated{
-    background-color: #F75B60;
+    background-color: #6F8FE4;
     opacity: 0.8;
     border: 1px  solid  #fff;
 }

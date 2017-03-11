@@ -1,6 +1,46 @@
 <ion-view view-title="图书定位">
   <ion-content >
-		   
+		<div class="bar bar-header item-input-inset" style="position: relative;width: 100%;margin-top:30px;margin-bottom: 10px;">
+					    <label class="item-input-wrapper" style="border: 1px solid;">
+						    <input type="text" placeholder="返回扫描结果">
+						</label>
+					    <button  type="button"  class="set-all-list l1" ng-click="wop()" style="height:42px;">扫描 </button> 			 
+		</div>
+		<table border="1" cellpadding="1" cellspacing="1" style="margin-left: 8px;margin-top:18px;">
+			<thead >
+				<th>书名</th>
+				<th>书位置</th>
+				<th>扫码日期</th>
+				<th>操作</th>
+			</thead>
+			<tbody>
+				 <tr ng-repeat="bookInfo in wopList">
+				 	 <td>{{bookInfo.bookName}}</td>
+				 	 <td>{{bookInfo.position}}</td>
+				 	 <td>{{bookInfo.date}}</td>
+				 	 <td>
+				 	 	  <button>删除</button>
+				 	 </td>
+				 </tr>
+			</tbody>
+		</table>
 
+		
   </ion-content>
+   <ion-footer-bar align-title="left" class="">
+		<div class="tabs tabs-icon-left" style="height: 50px;background: #3D3D4F;color:#fff;">
+		 <a class="tab-item" href="#/app/correct">
+		    <i class="icon ion-star"></i>
+		    收藏
+		  </a>
+		  <a class="tab-item" href="#/app/playlists  ">
+		    <i class="icon ion-home"></i>
+		    首页
+		  </a> 
+		  <a class="tab-item" href="#/app/set">
+		    <i class="icon ion-gear-b"></i>
+		    设置
+		  </a>
+		</div>
+    </ion-footer-bar>
 </ion-view>

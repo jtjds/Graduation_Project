@@ -142,3 +142,22 @@ ol, ul {
 .color{
     color: #6F8FE4;
 }
+.wop{
+    margin-top: 30px;
+    padding: 3px;
+    
+}
+.lb_position{
+    float: left;
+    margin-right: 6px;
+    background: #F75B60;
+    padding: 6px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 6px;
+}
+table, caption, tbody, tfoot, thead, tr, th, td{
+     border: 1px solid;
+     padding: 4px;
+}
