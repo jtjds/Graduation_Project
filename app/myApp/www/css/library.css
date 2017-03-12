@@ -161,3 +161,12 @@ table, caption, tbody, tfoot, thead, tr, th, td{
      border: 1px solid;
      padding: 4px;
 }
+.item-reorder .button.icon {
+    color: green;
+    font-size: 16px;
+}
+.submit_order{
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 10px;
+}

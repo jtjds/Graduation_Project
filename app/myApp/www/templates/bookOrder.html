@@ -1,6 +1,63 @@
 <ion-view view-title="图书预订">
-  <ion-content >
-		   
+    <ion-content >
+        <div class="buttons" style="margin-top: 30px;margin-bottom:10px;margin-left: 10px;">
+	            <button class="button"
+	                  ng-click="data.showDelete = !data.showDelete; data.showReorder = false" style="border: 1px solid;">全部删除	                  	
+	            </button>
+	              <button class="button"  style="border: 1px solid;">
+                     全部选择
+                </button>
+	            
+	           <!--  <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder" style="border: 1px solid;">
+                     全部选择
+                </button> -->
 
-  </ion-content>
+        </div>
+		<ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+	        <ion-item ng-repeat="item in items" item="item"  class="item-remove-animate" style="padding:16px">
+	            
+	            <img ng-src="{{item.img}}" style="float:left;width:60px;height:60px">
+		        <div class="re_con" style="line-height: 17px;margin-left:0px">
+				    <P>{{item.bookName}}</P>
+				    <p style="margin-left: 20px;">{{item.bookAuthor}}<span style="margin-left: 20px;">著</span></p>
+				    <p>{{item.chubanshe}}</p>	
+				</div> 
+				<input type="checkbox" name="checkbox" style="float:right;width:20px;height:20px;margin-top: -40px;">
+				<!-- <ion-checkbox ng-model="isChecked">复选框标签</ion-checkbox>
+ -->
+ 
+		          <ion-delete-button class="ion-minus-circled" 
+		                             ng-click="onItemDelete(item)">
+		          </ion-delete-button>
+		          <ion-option-button class="button-assertive"
+		                             ng-click="edit(item)">
+		            修改
+		          </ion-option-button>
+		          <ion-option-button class="button-calm"
+		                             ng-click="share(item)">
+		            分享
+		          </ion-option-button>
+		          <ion-reorder-button class="ion-checkmark-round" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+	        </ion-item>
+        </ion-list> 
+        <button class="button  button-positive submit_order" style="width:300px;" ng-click="submit_order()">提交预订</button>
+
+    </ion-content>
+    <ion-footer-bar align-title="left" class="">
+		<div class="tabs tabs-icon-left" style="height: 50px;background: #3D3D4F;color:#fff;">
+		 <a class="tab-item" href="#/app/correct">
+		    <i class="icon ion-star"></i>
+		    收藏
+		  </a>
+		  <a class="tab-item" href="#/app/playlists  ">
+		    <i class="icon ion-home"></i>
+		    首页
+		  </a> 
+		  <a class="tab-item" href="#/app/set">
+		    <i class="icon ion-gear-b"></i>
+		    设置
+		  </a>
+		</div>
+    </ion-footer-bar>
 </ion-view>
