@@ -1,0 +1,20 @@
+<div class="modal">
+    <ion-header-bar style="height:50px;width:100%;background: #eee;">
+        <div class="buttons">
+        <button class="button button-icon icon ion-ios-arrow-thin-left"
+         ng-click="closeModal()"></button>
+         </div>
+        <h1 class="title">应用中心</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list" style="margin-top:30px;">
+		    <a class=" item-icon-right person-info" href="#" ng-repeat="messageItem in messageList" style="padding: 10px;">
+		        <div class="message_top">
+				   <span class="icon ion-chevron-right icon_size" style="font-size:14px;margin-top: 0px;"></span>
+				   <p class="message" style="font-size: 18px;">{{messageItem.message}}			   
+                </div>
+                <div class="message_bottom" style="color:#999">{{messageItem.text}}</div>						        
+		    </a>		    
+		</div>
+    </ion-content>
+</div>

@@ -2,11 +2,11 @@
     <ion-content >
         <div class="buttons" style="margin-top: 30px;margin-bottom:10px;margin-left: 10px;">
 	            <button class="button"
-	                  ng-click="data.showDelete = !data.showDelete; data.showReorder = false" style="border: 1px solid;">全部删除	                  	
+	                  ng-click="data.showDelete = !data.showDelete; data.showReorder = false" style="border: 1px solid;"><i class="ion ion-ios-close-outline"></i>批量删除	                  	
 	            </button>
-	              <button class="button"  style="border: 1px solid;">
-                     全部选择
-                </button>
+	              <div class="choose_book"  style="border: 1px solid;" >
+                      <input type="checkbox" name="all" id="checkbox_all" ng-click="chooseAll()">批量选择
+                </div>
 	            
 	           <!--  <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder" style="border: 1px solid;">
                      全部选择
@@ -23,7 +23,7 @@
 				    <p style="margin-left: 20px;">{{item.bookAuthor}}<span style="margin-left: 20px;">著</span></p>
 				    <p>{{item.chubanshe}}</p>	
 				</div> 
-				<input type="checkbox" name="checkbox" style="float:right;width:20px;height:20px;margin-top: -40px;">
+				<input type="checkbox" name="checkbox" class="checkbox" style="float:right;width:20px;height:20px;margin-top: -40px;">
 				<!-- <ion-checkbox ng-model="isChecked">复选框标签</ion-checkbox>
  -->
  

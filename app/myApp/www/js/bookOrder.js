@@ -7,6 +7,10 @@ angular.module('bookOrder', [])
     $scope.data = {
         showDelete: false
     };
+      //解决web浏览器只跟踪一个历史浏览记录
+    $ionicHistory.nextViewOptions({
+         disableBack: true
+    });  
   
   $scope.edit = function(item) {
     alert('Edit Item: ' + item.id);
@@ -23,6 +27,21 @@ angular.module('bookOrder', [])
   $scope.onItemDelete = function(item) {
     $scope.items.splice($scope.items.indexOf(item), 1);
   };
+
+  $scope.chooseAll = function(){
+      var eles  = document.getElementsByName('checkbox');
+      var all = document.getElementById('checkbox_all');
+      if(all.checked == true){
+          for(var i=0;i<eles.length;i++){
+              eles[i].checked = true;
+          }
+      }else{
+           for(var i=0;i<eles.length;i++){
+              eles[i].checked = false;
+          }
+      }
+     //console.log(eles.length);
+  }
  
    $scope.submit_order = function(){
    	  // console.log('333');
