@@ -31,7 +31,8 @@ angular.module('starter.controllers', [])
 }])
 
 
-.controller('PlaylistsCtrl',['$scope','$ionicHistory', function($scope , $ionicHistory) {
+.controller('PlaylistsCtrl',['$scope','$ionicPopup', '$timeout', '$stateParams','$http','$ionicScrollDelegate','$location','$window' ,'$ionicHistory',function($scope, $ionicPopup, $timeout,$stateParams,$http,$ionicScrollDelegate,$location,$window,$ionicHistory) {
+  
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -40,6 +41,14 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
+  $scope.con_wx_wop = function(){
+        var alertPopup = $ionicPopup.alert({
+            template: "调起接口失败！"
+        });
+        // alertPopup.then(function(res) {
+        //      window.location="#/app/playlists";
+        // });   
+  }
 }])
 
 
