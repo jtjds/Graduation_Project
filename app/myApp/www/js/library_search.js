@@ -8,7 +8,29 @@ angular.module('starter.search', [])
        用户进行查询搜索图书,可查看详情,加入图书，进行预约图书清算,确定预约，预约成功！
 
      */
+    
+     //请求数据
+    $http({  
+            url : "../data/library_search.json",  
+            method : "get"         
+           // headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }
+
+        }).success(function(data) { 
+            $scope.data =  data;
+        
+        })
+    $scope.addBookList = [];
     $scope.search = function($index){
+        $scope.addBookList.push( $scope.data[$index]);
+        var  clickData = window._addBookList  =  [
+          {
+                 "img":$scope.data[$index].img,
+                 "bookName":$scope.data[$index].bookName,
+                 "author":$scope.data[$index].author,
+                 "chubanshe":$scope.data[$index].chubanshe
+          }
+        ]; 
+        console.log( window._addBookList);
         var confirmPopup = $ionicPopup.confirm({
            title: '加入图书',
            template: '是否加入预约书库?'
@@ -35,16 +57,7 @@ angular.module('starter.search', [])
     	console.log('index:' + $index);
     };
 
-    //请求数据
-    $http({  
-            url : "../data/library_search.json",  
-            method : "get"         
-           // headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }
-
-        }).success(function(data) { 
-            $scope.data =  data;
-        
-        })
+   
     $scope.showDetail = function($index){
  
             var alertPopup = $ionicPopup.alert({
