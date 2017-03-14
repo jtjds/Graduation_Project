@@ -4,8 +4,35 @@ angular.module('starter.search', [])
 
 .controller('library_searchCtrl',['$scope','$ionicPopup', '$timeout', '$stateParams','$http','$ionicScrollDelegate','$location','$window' ,'$ionicHistory',function($scope, $ionicPopup, $timeout,$stateParams,$http,$ionicScrollDelegate,$location,$window,$ionicHistory){
     //console.log('33333');
-    $scope.search = function(){
-    	console.log('jtt');
+    /*
+       用户进行查询搜索图书,可查看详情,加入图书，进行预约图书清算,确定预约，预约成功！
+
+     */
+    $scope.search = function($index){
+        var confirmPopup = $ionicPopup.confirm({
+           title: '加入图书',
+           template: '是否加入预约书库?'
+         });
+         confirmPopup.then(function(res) {
+           if(res) {
+            //加入预约书库，进行预约步骤
+                var confirmPopup = $ionicPopup.confirm({
+                   title: '进入书库',
+                   template: '是否立即进行预约清算?'
+                });
+                confirmPopup.then(function(res) {
+                    if(res) {
+                        window.location = "#/app/bookOrder";
+                        console.log('You are sure');
+                    }else{
+
+                    }
+                })           
+           } else {
+             console.log('You are not sure');
+           }
+         });
+    	console.log('index:' + $index);
     };
 
     //请求数据

@@ -1,5 +1,6 @@
 [
 	      {
+	      	   "id":1,
 		       "img" : "../img/ajaxwqsc.jpg",
 		       "bookName" : "钢铁是怎样炼成的",
 		       "author":"奥斯特 ",
@@ -10,6 +11,7 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
+	       	    "id":2,
 		       	"img" : "../img/ajaxwqsc.jpg",
 		       "bookName" : "自在独行:贾平凹的独行世界",
 		       "author":"贾平凹",
@@ -20,6 +22,7 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
+	       	   "id":3,
 		       "img" : "../img/ajaxwqsc.jpg",
 		       "bookName" : "解忧杂货店",
 		       "author":"东野圭吾",
@@ -30,7 +33,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/ajaxwqsc.jpg",
+	       	   "id":4,
+		       "img" : "../img/ajaxwqsc.jpg",
 		       "bookName" : "人类简史，从动物到上帝",
 		       "author":"尤瓦尔·赫拉利",
 		       "markNumber":"245",
@@ -40,7 +44,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/ajaxwqsc.jpg",
+	       	   "id":5,
+		       "img" : "../img/ajaxwqsc.jpg",
 		       "bookName" : "好好说话，新鲜有趣的话术精进技巧 ",
 		       "author":"马东",
 		       "markNumber":"467",
@@ -50,7 +55,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/ajaxwqsc.jpg",
+	       	   "id":6,
+		       "img" : "../img/ajaxwqsc.jpg",
 		       "bookName" : "直到那一天",
 		       "author":"米歇尔·普西",
 		       "markNumber":"452",
@@ -59,8 +65,9 @@
 		       "date":"2010-09-23",
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
-	       {
-		       	"img" : "../img/book.jpg",
+	       {   
+	       	   "id":7,
+		       "img" : "../img/book.jpg",
 		       "bookName" : "岛上书店",
 		       "author":"加.泽文",
 		       "markNumber":"134",
@@ -70,7 +77,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/book.jpg",
+	       	   "id":8,
+		       "img" : "../img/book.jpg",
 		       "bookName" : "我的第一本专注力训练书",
 		       "author":"迪士尼",
 		       "markNumber":"287",
@@ -80,7 +88,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/book.jpg",
+	       	   "id":9,
+		       "img" : "../img/book.jpg",
 		       "bookName" : "活着本来就单纯",
 		       "author":"丰子恺",
 		       "markNumber":"876",
@@ -90,7 +99,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/book.jpg",
+	       	   "id":10,
+		       "img" : "../img/book.jpg",
 		       "bookName" : "偷影子的人",
 		       "author":"马克.李维",
 		       "markNumber":"576",
@@ -100,7 +110,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/book.jpg",
+	       	   "id":11,
+		       "img" : "../img/book.jpg",
 		       "bookName" : "不要让未来的你，讨厌现在的自己",
 		       "author":"jt",
 		       "markNumber":"356",
@@ -110,7 +121,8 @@
 		       "ISBN":"0786-493487-12123890-3455"
 	      },
 	       {
-		       	"img" : "../img/book.jpg",
+	       	   "id":12,
+		       "img" : "../img/book.jpg",
 		       "bookName" : "你心又力量柔软，却",
 		       "author":"林清玄",
 		       "markNumber":"369",

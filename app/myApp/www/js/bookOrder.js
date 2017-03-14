@@ -27,26 +27,42 @@ angular.module('bookOrder', [])
   $scope.onItemDelete = function(item) {
     $scope.items.splice($scope.items.indexOf(item), 1);
   };
-
+  $scope.checkedBook = [];
   $scope.chooseAll = function(){
       var eles  = document.getElementsByName('checkbox');
       var all = document.getElementById('checkbox_all');
       if(all.checked == true){
           for(var i=0;i<eles.length;i++){
               eles[i].checked = true;
+              if(eles[i].checked == true){
+                  $scope.checkedBook.push(eles[i]);
+              }
           }
       }else{
            for(var i=0;i<eles.length;i++){
               eles[i].checked = false;
           }
       }
-     //console.log(eles.length);
+     console.log($scope.checkedBook.length);
   }
- 
+  var getCheckedNum = function(){
+          var eles  = document.getElementsByName('checkbox');
+          var num = 0;
+          for(var i=0;i<eles.length;i++){
+              if(eles[i].checked == true){
+                    num++;
+              }
+          }
+          return num;
+  }; 
    $scope.submit_order = function(){
+      //console.log($scope.checkedBook.length);
    	  // console.log('333');
+      //选中已经选择的图书
+      
+        console.log('num:' + getCheckedNum());
         var alertPopup = $ionicPopup.alert({
-            template: "订约成功，请尽快前往图书馆取书！"
+            template: "您已预订" +getCheckedNum() + "本图书，请尽快前往图书馆取书！"
         });
         alertPopup.then(function(res) {
              window.location="#/app/playlists";

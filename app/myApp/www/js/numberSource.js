@@ -17,17 +17,17 @@ angular.module('numberSource', [])
 	    $scope.modal.hide();
 	};
 	 //当我们用到模型时，清除它！
-    $scope.$on('$destroy', function() {
-        $scope.modal.remove();
-    });
-     // 当隐藏的模型时执行动作
-    $scope.$on('modal.hide', function() {
-    // 执行动作
-    });
-    // 当移动模型时执行动作
-    $scope.$on('modal.removed', function() {
-        // 执行动作
-    });
+    // $scope.$on('$destroy', function() {
+    //     $scope.modal.remove();
+    // });
+    //  // 当隐藏的模型时执行动作
+    // $scope.$on('modal.hide', function() {
+    // // 执行动作
+    // });
+    // // 当移动模型时执行动作
+    // $scope.$on('modal.removed', function() {
+    //     // 执行动作
+    // });
 
     $scope.messageList = [
         {
