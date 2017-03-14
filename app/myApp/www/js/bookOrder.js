@@ -7,10 +7,10 @@ angular.module('bookOrder', [])
     $scope.data = {
         showDelete: false
     };
-      //解决web浏览器只跟踪一个历史浏览记录
-    // $ionicHistory.nextViewOptions({
-    //      disableBack: true
-    // });  
+     // 解决web浏览器只跟踪一个历史浏览记录
+    $ionicHistory.nextViewOptions({
+         disableBack: true
+    });  
   
   $scope.edit = function(item) {
     alert('Edit Item: ' + item.id);
@@ -39,7 +39,7 @@ angular.module('bookOrder', [])
               }
           }
       }else{
-           for(var i=0;i<eles.length;i++){
+          for(var i=0;i<eles.length;i++){
               eles[i].checked = false;
           }
       }
@@ -58,8 +58,7 @@ angular.module('bookOrder', [])
    $scope.submit_order = function(){
       //console.log($scope.checkedBook.length);
    	  // console.log('333');
-      //选中已经选择的图书
-      
+      //选中已经选择的图书     
         console.log('num:' + getCheckedNum());
         var alertPopup = $ionicPopup.alert({
             template: "您已预订" +getCheckedNum() + "本图书，请尽快前往图书馆取书！"
@@ -67,52 +66,55 @@ angular.module('bookOrder', [])
         alertPopup.then(function(res) {
              window.location="#/app/playlists";
         });      
-   }
-   // $scope.items =  [
-   //    // {
-   //    //  "img":"../img/ajaxwqsc.jpg",
-   //    //  "bookName":"javaScript高级教程",
-   //    //  "author":"李松峰",
-   //    //  "chubanshe":"上海电子科技出版社"
-   //    // }
-   // ];
-    //$scope.items  = window._addBookList
-    //console.log(window._addBookList );
-   //$scope.items.push(window._addBookList);
-  
+   };
+   // $scope.items  = [];
+    $scope.items  = window._addBookList;
+    var displayObj = document.getElementById('display');
+    var order  = document.getElementById('order');
+    if($scope.items  == null){
+        displayObj.style.display  = 'block';
+        order.style.display  = 'none';
+    }else {
+        displayObj.style.display  = 'none';
+        order.style.display  = 'block';
+    }
 
-  $scope.items = [
-      {
-      	"img":"../img/ajaxwqsc.jpg",
-      	"bookName":"javaScript高级教程",
-      	"author":"李松峰",
-      	"chubanshe":"上海电子科技出版社"
-      },{
-      	"img":"../img/angularjskfxyd.jpg",
-      	"bookName":"javaScript高级教程",
-      	"author":"李松峰",
-      	"chubanshe":"上海电子科技出版社"
-      },{
-      	"img":"../img/bxgzldm.jpg",
-      	"bookName":"javaScript高级教程",
-      	"author":"李松峰",
-      	"chubanshe":"上海电子科技出版社"
-      },{
-      	"img":"../img/ajaxwqsc.jpg",
-      	"bookName":"javaScript高级教程",
-      	"author":"李松峰",
-      	"chubanshe":"上海电子科技出版社"
-      },{
-      	"img":"../img/bxgzldm.jpg",
-      	"bookName":"javaScript高级教程",
-      	"author":"李松峰",
-      	"chubanshe":"上海电子科技出版社"
-      },{
-      	"img":"../img/angularjskfxyd.jpg",
-      	"bookName":"javaScript高级教程",
-      	"author":"李松峰",
-      	"chubanshe":"上海电子科技出版社"
-      }
-  ];
+    //如果有长度，将其字隐藏
+    
+    console.log(window._addBookList );
+   //$scope.items.push(window._addBookList);
+  // $scope.items = [
+  //     {
+  //     	"img":"../img/ajaxwqsc.jpg",
+  //     	"bookName":"javaScript高级教程",
+  //     	"author":"李松峰",
+  //     	"chubanshe":"上海电子科技出版社"
+  //     },{
+  //     	"img":"../img/angularjskfxyd.jpg",
+  //     	"bookName":"javaScript高级教程",
+  //     	"author":"李松峰",
+  //     	"chubanshe":"上海电子科技出版社"
+  //     },{
+  //     	"img":"../img/bxgzldm.jpg",
+  //     	"bookName":"javaScript高级教程",
+  //     	"author":"李松峰",
+  //     	"chubanshe":"上海电子科技出版社"
+  //     },{
+  //     	"img":"../img/ajaxwqsc.jpg",
+  //     	"bookName":"javaScript高级教程",
+  //     	"author":"李松峰",
+  //     	"chubanshe":"上海电子科技出版社"
+  //     },{
+  //     	"img":"../img/bxgzldm.jpg",
+  //     	"bookName":"javaScript高级教程",
+  //     	"author":"李松峰",
+  //     	"chubanshe":"上海电子科技出版社"
+  //     },{
+  //     	"img":"../img/angularjskfxyd.jpg",
+  //     	"bookName":"javaScript高级教程",
+  //     	"author":"李松峰",
+  //     	"chubanshe":"上海电子科技出版社"
+  //     }
+  // ];
   
 }])

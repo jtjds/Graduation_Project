@@ -13,24 +13,27 @@ angular.module('starter.search', [])
     $http({  
             url : "../data/library_search.json",  
             method : "get"         
-           // headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }
-
+          //headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }
         }).success(function(data) { 
-            $scope.data =  data;
-        
+            $scope.data =  data;        
         })
     $scope.addBookList = [];
-    $scope.search = function($index){
-        $scope.addBookList.push( $scope.data[$index]);
-        var  clickData = window._addBookList  =  [
-          {
-                 "img":$scope.data[$index].img,
-                 "bookName":$scope.data[$index].bookName,
-                 "author":$scope.data[$index].author,
-                 "chubanshe":$scope.data[$index].chubanshe
-          }
-        ]; 
-        console.log( window._addBookList);
+    window._addBookList  = [];
+    $scope.addCurrentBook = function($index){
+        for(var i=0;i< $scope.data.length;i++){
+            if(i == $index){
+               window._addBookList.push(
+                  {
+                     "img":$scope.data[$index].img,
+                     "bookName":$scope.data[$index].bookName,
+                     "author":$scope.data[$index].author,
+                     "chubanshe":$scope.data[$index].chubanshe
+                  }
+              );
+            }
+        }       
+        //window._addBookList  =  $scope.addBookList;
+        console.log(window._addBookList );
         var confirmPopup = $ionicPopup.confirm({
            title: '加入图书',
            template: '是否加入预约书库?'
@@ -59,7 +62,6 @@ angular.module('starter.search', [])
 
    
     $scope.showDetail = function($index){
- 
             var alertPopup = $ionicPopup.alert({
 		       title: '展示详情',
 		       template: '<span style="color:#666;margin-right:5px;">书名:</span>' + $scope.data[$index].bookName+'<br>'

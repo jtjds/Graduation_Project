@@ -41,8 +41,8 @@
 		          <ion-reorder-button class="ion-checkmark-round" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
 	        </ion-item>
         </ion-list>
-        <p style="text-align: center; margin-top: 30px;">暂时还没有添加任何图书哦！<br>快去<a href="#/app/library_search"><span style="color:#6F8FE4">查询首页</span></a>看看吧！</p> 
-        <button class="button  button-positive submit_order" style="width:300px;display:none" ng-click="submit_order()">确定预订</button>
+        <p style="text-align: center; margin-top: 30px;display:block" id="display">暂时还没有添加任何图书哦！<br>快去<a href="#/app/library_search"><span style="color:#6F8FE4">查询首页</span></a>看看吧！</p> 
+        <button class="button  button-positive submit_order order" id="order" style="width:300px;display:none" ng-click="submit_order()">确定预订</button>
 
     </ion-content>
     <ion-footer-bar align-title="left" class="">
