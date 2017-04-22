@@ -4,9 +4,9 @@
 		    <div class="bar bar-header item-input-inset" style="position: relative;width: 100%;margin-top:30px;margin-bottom: 10px;">
 					    <label class="item-input-wrapper" style="">
 						    <i class="icon ion-ios-search placeholder-icon"></i>
-						    <input type="search" placeholder="作者/书名">
+						    <input type="search" placeholder="作者/书名"  id="authorOrbookName" ng-model="bookData.authorOrbookName">
 						</label>
-					    <button  type="button"  class="set-all-list l1" ng-click="search()" style="height:42px;">查询 </button> 			 
+					    <button  type="button"  class="set-all-list l1" ng-click="searchMatch()" style="height:42px;">查询 </button> 			 
 			</div>
 			<!-- 循环列表 -->
 			<ion-list style="display: block;" id="ion-list-one">			        
@@ -24,6 +24,22 @@
 								</div>							
 					    </ion-item>					     
 			</ion-list> 
+			<ion-list style="display: none;" id="ion-list-two">			        
+					    <ion-item ng-repeat="value in data" >			       				       
+							    <div class="item item-avatar" style="padding: 0px;">					        
+								        <img ng-src="{{value.img}}">    
+								    <div class="set-library-content">
+	                                     <div class="name-top">{{value.bookName}}</div>
+	                                     <div class="author-bottom">
+	                                        <span style="margin-right: 0px;color:#ccc;">作者：</span>{{value.author}}
+                                            <button  type="button"  class="set-all-list l1" style="height:30px;height: 30px;line-height: 1px;" ng-click="showDetail($index)">查看详情 </button>
+                                            <button  type="button"  class="set-all-list l1" ng-click="addCurrentBook($index)" style="height:30px;height: 30px;line-height: 1px;">加入书库 </button>
+	                                     </div>
+								    </div>							       
+								</div>							
+					    </ion-item>					     
+			</ion-list> 
+			<h3 id="search_none" style="display: none;" class="search_none">没有找到合适的搜索项</h3>
     </ion-content>
     <ion-footer-bar align-title="left" class="">
 		<div class="tabs tabs-icon-left" style="height: 50px;background: #3D3D4F;color:#fff;">

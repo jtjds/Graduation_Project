@@ -15,6 +15,7 @@ angular.module('numberSource', [])
 	};
 	$scope.closeModal = function() {
 	    $scope.modal.hide();
+	    console.log('hh');
 	};
 	 //当我们用到模型时，清除它！
     // $scope.$on('$destroy', function() {
